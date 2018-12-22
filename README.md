@@ -19,7 +19,16 @@ strengths.
 Use [`serve.py`](./serve.py) to start the http
 server:
 
-        python serve.py
+        $> python serve.py
+
+
+## Testing
+
+Use [`chat.sh`](./chat.sh) to chat with the
+started bot:
+
+
+        $> ./chat.sh Good morning
 
 
 ## Feedback
