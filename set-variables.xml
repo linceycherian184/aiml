@@ -1,0 +1,82 @@
+<aiml version="1.0">
+
+    <!-- Used by ebrain-aiml to set various user variables -->
+
+    <category>
+        <pattern>EBRAINAIML SETNAME *</pattern>
+        <template>
+            <set name="name"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML EYECOLOR *</pattern>
+        <template>
+            <set name="eyecolor"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML HAIRCOLOR *</pattern>
+        <template>
+            <set name="haircolor"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML FAVCOLOR *</pattern>
+        <template>
+            <set name="favcolor"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML JOB *</pattern>
+        <template>
+            <set name="job"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML FAVMOVIE *</pattern>
+        <template>
+            <set name="favmovie"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML SEXPREF *</pattern>
+        <template>
+            <set name="sexpref"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML GENDER *</pattern>
+        <template>
+            <set name="gender"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML SIGN *</pattern>
+        <template>
+            <set name="sign"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML LOCATION *</pattern>
+        <template>
+            <set name="location"><star/></set> set.
+        </template>
+    </category>
+
+    <category>
+        <pattern>EBRAINAIML MARRIED *</pattern>
+        <template>
+            <set name="married"><star/></set> set.
+        </template>
+    </category>
+
+</aiml>

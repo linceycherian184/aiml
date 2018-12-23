@@ -21,6 +21,24 @@ k = aiml.Kernel()
 # of an AIML file into the Kernel.
 k.learn("std-startup.xml")
 
+#       problem/
+# AIML can use variables to make the conversation
+# better (for example NAME or AGE). However, the
+# variables are set during the AIML conversation
+# which means they will vanish every time the
+# node restarts. This is awful because that means
+# ever time the node restarts the bot will forget
+# the user name, age, and other details and ask
+# her again!
+#
+#       way/
+# We will create a set of phrases that the
+# `ebrain-aiml` can use to set the various variables.
+# This will allow the `ebrain-aiml` to store the
+# user information in a knowledge base somewhere
+# and use the phrases to populate the variables
+k.learn("set-variables.xml")
+
 #       outcome/
 # Use the 'respond' method to compute the response
 # to a user's input string.  respond() returns
