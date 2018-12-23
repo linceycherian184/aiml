@@ -40,10 +40,9 @@ k.learn("std-startup.xml")
 k.learn("set-variables.xml")
 
 #       outcome/
-# Use the 'respond' method to compute the response
-# to a user's input string.  respond() returns
-# the interpreter's response, which in this case
-# we ignore.
+# This command loads the 'standard' AIML files
+# (TODO: Should we remove this? Users can type
+# in the same command)
 k.respond("load aiml b")
 
 #       understand/
