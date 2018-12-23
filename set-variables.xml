@@ -3,77 +3,77 @@
     <!-- Used by ebrain-aiml to set various user variables -->
 
     <category>
-        <pattern>EBRAINAIML SETNAME *</pattern>
+        <pattern>EBRAINAIML SET NAME *</pattern>
         <template>
             <set name="name"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML EYECOLOR *</pattern>
+        <pattern>EBRAINAIML SET EYECOLOR *</pattern>
         <template>
             <set name="eyecolor"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML HAIRCOLOR *</pattern>
+        <pattern>EBRAINAIML SET HAIRCOLOR *</pattern>
         <template>
             <set name="haircolor"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML FAVCOLOR *</pattern>
+        <pattern>EBRAINAIML SET FAVCOLOR *</pattern>
         <template>
             <set name="favcolor"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML JOB *</pattern>
+        <pattern>EBRAINAIML SET JOB *</pattern>
         <template>
             <set name="job"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML FAVMOVIE *</pattern>
+        <pattern>EBRAINAIML SET FAVMOVIE *</pattern>
         <template>
             <set name="favmovie"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML SEXPREF *</pattern>
+        <pattern>EBRAINAIML SET SEXPREF *</pattern>
         <template>
             <set name="sexpref"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML GENDER *</pattern>
+        <pattern>EBRAINAIML SET GENDER *</pattern>
         <template>
             <set name="gender"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML SIGN *</pattern>
+        <pattern>EBRAINAIML SET SIGN *</pattern>
         <template>
             <set name="sign"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML LOCATION *</pattern>
+        <pattern>EBRAINAIML SET LOCATION *</pattern>
         <template>
             <set name="location"><star/></set> set.
         </template>
     </category>
 
     <category>
-        <pattern>EBRAINAIML MARRIED *</pattern>
+        <pattern>EBRAINAIML SET MARRIED *</pattern>
         <template>
             <set name="married"><star/></set> set.
         </template>
