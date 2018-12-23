@@ -44,6 +44,8 @@ class S(BaseHTTPRequestHandler):
             msg = data["msg"]
             if msg:
                 resp = k.respond(msg)
+                self.send_response(200)
+                self.end_headers()
                 self.wfile.write(resp)
             else:
                 self.send_response(404)
