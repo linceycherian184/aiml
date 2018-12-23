@@ -21,6 +21,12 @@ k = aiml.Kernel()
 # of an AIML file into the Kernel.
 k.learn("std-startup.xml")
 
+#       outcome/
+# This command loads the 'standard' AIML files
+# (TODO: Should we remove this? Users can type
+# in the same command)
+k.respond("load aiml b")
+
 #       problem/
 # AIML can use variables to make the conversation
 # better (for example NAME or AGE). However, the
@@ -38,12 +44,6 @@ k.learn("std-startup.xml")
 # user information in a knowledge base somewhere
 # and use the phrases to populate the variables
 k.learn("set-variables.xml")
-
-#       outcome/
-# This command loads the 'standard' AIML files
-# (TODO: Should we remove this? Users can type
-# in the same command)
-k.respond("load aiml b")
 
 #       understand/
 # Use a python class to handle HTTP POST requests
