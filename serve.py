@@ -60,6 +60,8 @@ class S(BaseHTTPRequestHandler):
             data = json.loads(data_s)
             msg = data["msg"]
             if msg:
+                if isinstance(msg, list):
+                    msg = msg[0]
                 resp = k.respond(msg)
                 self.send_response(200)
                 self.end_headers()
