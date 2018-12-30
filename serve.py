@@ -82,19 +82,23 @@ class S(BaseHTTPRequestHandler):
                 self.wfile.write(k.getPredicate(name))
             else:
                 self.send_response(404)
+                self.end_headers()
         elif msg.startswith(pfx_set):
             cmd = msg[len(pfx_set):]
             if cmd:
                 i = cmd.index(' ')
                 if i < 1:
                     self.send_response(404)
+                    self.end_headers()
                 else:
                     name = cmd[:i].strip()
                     value = cmd[i:].strip()
                     k.setPredicate(name, value)
                     self.send_response(200)
+                    self.end_headers()
             else:
                 self.send_response(404)
+                self.end_headers()
         else:
             self.send_response(200)
             self.end_headers()
