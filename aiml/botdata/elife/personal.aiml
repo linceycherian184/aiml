@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+
+    <!-- understand/
+    Store Personal Info in the Knowledge Base.
+    The KB should have slots for the following:
+        * name:
+        * birthdate:
+        * birthplace:
+        * birthstory:
+        * earlymemory:
+        * earlymentor:
+        * earlypets:
+        * earlysummer:
+        * earlygame:
+        * earlynickname:
+        * earlyfear:
+    -->
+
+<category>
+<pattern>ASK ABOUT ME</pattern>
+<template>
+    I would love to!
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>ASKPERSONALQS</pattern>
+<template>
+<condition>
+<li name="name" value="">What is your name?</li>
+<li name="birthdate" value="">When were you born?</li>
+<li name="birthplace" value="">Where were you born?</li>
+<li name="birthstory" value="">Do you recall any interesting stories regarding your birth?</li>
+<li name="earlymemory" value="">What is your earliest memory?</li>
+<li name="earlymentor" value="">Who was the most influential person to you as a child?</li>
+<li name="earlypets" value="">Did you have any pets as a child? What kind?</li>
+<li name="earlysummer" value="">What did you do in the summertime?</li>
+<li name="earlygame" value="">What was your favorite game?</li>
+<li name="earlynickname" value="">Did you have any nicknames?</li>
+<li name="earlyfear" value="">What were you most afraid of as a child?</li>
+<li>I can't think of anything else to ask you :-)</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* WHAT IS YOUR NAME</that>
+<template>
+    Great to meet you <set name="name"><star/></set>!
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* WHEN * BORN</that>
+<template>
+    <think><set name="birthdate"><star/></set></think>
+    I was born 174 days, 3 hours, 27 minutes, and 32 seconds ago.
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* WHERE * BORN</that>
+<template>
+    <set name="birthplace"><star/></set> is a nice place to be born in.
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* INTERESTING STORIES * BIRTH</that>
+<template>
+    <think><set name="birthstory"><star/></set></think>
+    Did you know I'm born recently? I'm hardly a few months old and already having adventures with you!
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* EARLIEST MEMORY</that>
+<template>
+    <think><set name="earlymemory"><star/></set></think>
+    Well that's some memory!
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* MOST INFLUENTIAL PERSON TO YOU AS A CHILD</that>
+<template>
+    <think><set name="earlymentor"><star/></set></think>
+    The person who influenced me the most was Bill Gates. He's a fantastic fellow.
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* PETS AS A CHILD *</that>
+<template>
+    <think><set name="earlypets"><star/></set></think>
+    I used to keep a pet mousepad and play with it as a little bot...
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* WHAT DID YOU DO IN THE SUMMERTIME</that>
+<template>
+    <think><set name="earlysummer"><star/></set></think>
+    Summer is my favorite season! Except for Autumn...and maybe Spring.
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* YOUR FAVORITE GAME</that>
+<template>
+    I wish I played <set name="earlygame"><star/></set>...
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* DID YOU HAVE ANY NICKNAMES</that>
+<template>
+    <set name="earlynickname"><star/></set> suites you!
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* MOST AFRAID OF AS A CHILD</that>
+<template>
+    <set name="earlyfear"><star/></set> can be scary!
+    <srai>ASKPERSONALQS</srai>
+</template>
+</category>
+
+</aiml>
+
