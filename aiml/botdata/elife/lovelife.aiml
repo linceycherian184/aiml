@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+
+    <!-- understand/
+    Store User's love life info in the Knowledge Base.
+    The KB should have slots for the following:
+        * firstlove:
+        * heartbreak:
+        * heartbreaker:
+        * lovefirstsight:
+        * romanticgesture:
+        * sweptofffeet:
+    -->
+
+<category>
+<pattern>ASK ABOUT LOVE</pattern>
+<template>
+    You're a romantic!
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>ASKLOVEQS</pattern>
+<template>
+<condition>
+<li name="firstlove" value="">Who was your first love?</li>
+<li name="heartbreak" value="">Describe your first heartbreak</li>
+<li name="heartbreaker" value="">Have you broken any hearts?</li>
+<li name="lovefirstsight" value="">Do you believe in love at first sight?</li>
+<li name="romanticgesture" value="">What was the most special way you have shown someone that you loved them?</li>
+<li name="sweptofffeet" value="">What was the most special way you have been shown you are loved?</li>
+<li>I can't think of anything else to ask you :-)</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* WHO WAS YOUR FIRST LOVE</that>
+<template>
+    <set name="firstlove"><star/></set> is a sweet name.
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* YOUR FIRST HEARTBREAK</that>
+<template>
+    <think><set name="heartbreak"><star/></set></think>
+    That's sad...
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* YOU BROKEN ANY HEARTS</that>
+<template>
+    <think><set name="heartbreaker"><star/></set></think>
+    Hmm...
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* DO YOU BELIEVE IN LOVE AT FIRST SIGHT</that>
+<template>
+    <think><set name="lovefirstsight"><star/></set></think>
+    Sounds romantic!
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* MOST SPECIAL WAY YOU HAVE SHOWN SOMEONE THAT YOU LOVED THEM</that>
+<template>
+    <think><set name="romanticgesture"><star/></set></think>
+    Awww...
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* MOST SPECIAL WAY YOU HAVE BEEN SHOWN YOU ARE LOVED</that>
+<template>
+    <think><set name="sweptofffeet"><star/></set></think>
+    I wish someone would sweep me off my feet!
+    <srai>ASKLOVEQS</srai>
+</template>
+</category>
+
+
+</aiml>
+

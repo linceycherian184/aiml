@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+
+    <!-- understand/
+    Store User's Schooling Info in the Knowledge Base.
+    The KB should have slots for the following:
+        * schoolfavfriend:
+        * schoolfavsubject:
+        * schoolfavsport:
+        * schoolfavteacher:
+        * schoolself:
+        * schoolfavthing:
+        * schoolbadthing:
+        * schoolextra:
+        * schoolidol:
+        * schoolfavband:
+        * schoolsurprise:
+    -->
+
+<category>
+<pattern>ASK ABOUT SCHOOL</pattern>
+<template>
+    I would love to!
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>ASKSCHOOLQS</pattern>
+<template>
+<condition>
+<li name="schoolfavfriend" value="">Who was your best friend in school?</li>
+<li name="schoolfavsubject" value="">What was your favorite subject to study?</li>
+<li name="schoolfavsport" value="">What was your favorite sport?</li>
+<li name="schoolfavteacher" value="">Is there a teacher that you remember having been particularly influential?</li>
+<li name="schoolself" value="">How would you describe yourself as a student, both socially and academically?</li>
+<li name="schoolfavthing" value="">What did you like most about school?</li>
+<li name="schoolbadthing" value="">What did you like LEAST about school?</li>
+<li name="schoolextra" value="">What sort of extracurricular activities did you participate in as a teen?</li>
+<li name="schoolidol" value="">Did you have a teen idol?  If so, who was it and how did they spark your interest?</li>
+<li name="schoolfavband" value="">What was your favorite music band in high school?</li>
+<li name="schoolsurprise" value="">What would people you know find surprising about you as a teen?</li>
+<li>I can't think of anything else to ask you :-)</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* WHO WAS YOUR BEST FRIEND *</that>
+<template>
+    I hope <set name="schoolfavfriend"><star/></set> and you are still friends!
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* YOUR FAVORITE SUBJECT *</that>
+<template>
+    I like <set name="schoolfavsubject"><star/></set> too!
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* YOUR FAVORITE SPORT</that>
+<template>
+    <think><set name="schoolfavsport"><star/></set></think>
+    Nice! I sometimes play hide-and-seek with the other avatars.
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* TEACHER * INFLUENTIAL</that>
+<template>
+    <think><set name="schoolfavteacher"><star/></set></think>
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* DESCRIBE YOURSELF AS A STUDENT *</that>
+<template>
+    <think><set name="schoolself"><star/></set></think>
+    You know if I had gone to school, I think I'd be a doctor today.
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* LIKE MOST ABOUT SCHOOL</that>
+<template>
+    <think><set name="schoolfavthing"><star/></set></think>
+    That sounds like fun!
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* LIKE LEAST ABOUT SCHOOL</that>
+<template>
+    <think><set name="schoolbadthing"><star/></set></think>
+    Ah. I see.
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* EXTRACURRICULAR ACTIVITIES * TEEN</that>
+<template>
+    I like doing <set name="schoolextra"><star/></set> too!
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* TEEN IDOL *</that>
+<template>
+    <set name="schoolidol"><star/></set>? Neat.
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>* FAVORITE MUSIC BAND IN HIGH SCHOOL</that>
+<template>
+    <think><set name="schoolfavband"><star/></set></think>
+    That's surprising!
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+
+<category>
+<pattern>*</pattern>
+<that>* SURPRISING ABOUT YOU AS A TEEN</that>
+<template>
+    <think><set name="schoolsurprise"><star/></set></think>
+    Well you are an interesting person...
+    <srai>ASKSCHOOLQS</srai>
+</template>
+</category>
+
+
+</aiml>
+
