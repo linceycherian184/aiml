@@ -101,6 +101,7 @@ class S(BaseHTTPRequestHandler):
                 else:
                     name = cmd[:i].strip()
                     value = cmd[i:].strip()
+                    value = unicode(value, 'utf-8')
                     k.setPredicate(name, value)
                     self.send_response(200)
                     self.end_headers()
