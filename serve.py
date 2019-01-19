@@ -40,12 +40,15 @@ class S(BaseHTTPRequestHandler):
         global k
         content_length = int(self.headers['Content-Length'])
         data_s = self.rfile.read(content_length)
+        data_s = data_s + ""
         try:
             data = json.loads(data_s)
             msg = data["msg"]
             if msg:
                 if isinstance(msg, list):
                     msg = msg[0]
+                if isinstance(msg, unicode):
+                    msg = msg.encode('utf-8')
                 self.respond_to(msg)
             else:
                 self.send_response(404)
