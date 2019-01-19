@@ -45,6 +45,132 @@
 </template>
 </category>
 
+
+<category>
+<pattern>WHAT IS YOUR NAME</pattern>
+<template>
+<condition>
+<li name="name" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="name"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHEN WERE YOU BORN</pattern>
+<template>
+<condition>
+<li name="birthdate" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="birthdate"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHERE WERE YOU BORN</pattern>
+<template>
+<condition>
+<li name="birthplace" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="birthplace"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>DO YOU RECALL ANY INTERESTING STORIES REGARDING YOUR BIRTH</pattern>
+<template>
+<condition>
+<li name="birthstory" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="birthstory"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT IS YOUR EARLIEST MEMORY</pattern>
+<template>
+<condition>
+<li name="earlymemory" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlymemory"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHO WAS THE MOST INFLUENTIAL PERSON TO YOU AS A CHILD</pattern>
+<template>
+<condition>
+<li name="earlymentor" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlymentor"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>DID YOU HAVE ANY PETS AS A CHILD</pattern>
+<template>
+<condition>
+<li name="earlypets" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlypets"/></li>
+</condition>
+</template>
+</category>
+
+
+<category>
+<pattern>WHAT DID YOU DO IN THE SUMMERTIME</pattern>
+<template>
+<condition>
+<li name="earlysummer" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlysummer"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WAS YOUR FAVORITE GAME</pattern>
+<template>
+<condition>
+<li name="earlygame" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlygame"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>DO YOU HAVE ANY NICKNAMES</pattern>
+<template>
+<srai>NICKNAMES</srai>
+</template>
+</category>
+
+<category>
+<pattern>DID YOU HAVE ANY NICKNAMES</pattern>
+<template>
+<srai>NICKNAMES</srai>
+</template>
+</category>
+
+<category>
+<pattern>NICKNAMES</pattern>
+<template>
+<condition>
+<li name="earlynickname" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlynickname"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WERE YOU MOST AFRAID OF AS A CHILD</pattern>
+<template>
+<condition>
+<li name="earlyfear" value="">I don't know yet. I can ask about you if you like.</li>
+<li><get name="earlyfear"/></li>
+</condition>
+</template>
+</category>
+
 <category>
 <pattern>*</pattern>
 <that>* WHAT IS YOUR NAME</that>

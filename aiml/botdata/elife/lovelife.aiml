@@ -35,6 +35,68 @@
 </template>
 </category>
 
+
+<category>
+<pattern>WHO WAS YOUR FIRST LOVE</pattern>
+<template>
+<condition>
+<li name="firstlove" value="">I don't know yet. I can ask about love if you like.</li>
+<li><get name="firstlove"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>DESCRIBE YOUR FIRST HEARTBREAK</pattern>
+<template>
+<condition>
+<li name="heartbreak" value="">I don't know yet. I can ask about love if you like.</li>
+<li><get name="heartbreak"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>HAVE YOU BROKEN ANY HEARTS</pattern>
+<template>
+<condition>
+<li name="heartbreaker" value="">I don't know yet. I can ask about love if you like.</li>
+<li><get name="heartbreaker"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>DO YOU BELIEVE IN LOVE AT FIRST SIGHT</pattern>
+<template>
+<condition>
+<li name="lovefirstsight" value="">I don't know yet. I can ask about love if you like.</li>
+<li><get name="lovefirstsight"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WAS THE MOST SPECIAL WAY YOU HAVE SHOWN SOMEONE THAT YOU LOVED THEM</pattern>
+<template>
+<condition>
+<li name="romanticgesture" value="">I don't know yet. I can ask about love if you like.</li>
+<li><get name="romanticgesture"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WAS THE MOST SPECIAL WAY YOU HAVE BEEN SHOWN YOU ARE LOVED</pattern>
+<template>
+<condition>
+<li name="sweptofffeet" value="">I don't know yet. I can ask about love if you like.</li>
+<li><get name="sweptofffeet"/></li>
+</condition>
+</template>
+</category>
+
+
 <category>
 <pattern>*</pattern>
 <that>* WHO WAS YOUR FIRST LOVE</that>

@@ -45,6 +45,118 @@
 </template>
 </category>
 
+
+<category>
+<pattern>WHO WAS YOUR BEST FRIEND IN SCHOOL</pattern>
+<template>
+<condition>
+<li name="schoolfavfriend" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolfavfriend"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WAS YOUR FAVORITE SUBJECT TO STUDY</pattern>
+<template>
+<condition>
+<li name="schoolfavsubject" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolfavsubject"/></li>
+</condition>
+</template>
+</category>
+
+
+<category>
+<pattern>WHAT WAS YOUR FAVORITE SPORT</pattern>
+<template>
+<condition>
+<li name="schoolfavsport" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolfavsport"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>IS THERE A TEACHER THAT YOU REMEMBER HAVING BEEN PARTICULARLY INFLUENTIAL</pattern>
+<template>
+<condition>
+<li name="schoolfavteacher" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolfavteacher"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>HOW WOULD YOU DESCRIBE YOURSELF AS A STUDENT *</pattern>
+<template>
+<condition>
+<li name="schoolself" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolself"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT DID YOU LIKE MOST ABOUT SCHOOL</pattern>
+<template>
+<condition>
+<li name="schoolfavthing" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolfavthing"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT DID YOU LIKE LEAST ABOUT SCHOOL</pattern>
+<template>
+<condition>
+<li name="schoolbadthing" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolbadthing"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT SORT OF EXTRACURRICULAR ACTIVITIES DID YOU PARTICIPATE IN AS A TEEN</pattern>
+<template>
+<condition>
+<li name="schoolextra" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolextra"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>DID YOU HAVE A TEEN IDOL</pattern>
+<template>
+<condition>
+<li name="schoolidol" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolidol"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WAS YOUR FAVORITE MUSIC BAND IN HIGH SCHOOL</pattern>
+<template>
+<condition>
+<li name="schoolfavband" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolfavband"/></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>WHAT WOULD PEOPLE YOU KNOW FIND SURPRISING ABOUT YOU AS A TEEN</pattern>
+<template>
+<condition>
+<li name="schoolsurprise" value="">I don't know yet. I can ask about school if you like.</li>
+<li><get name="schoolsurprise"/></li>
+</condition>
+</template>
+</category>
+
 <category>
 <pattern>*</pattern>
 <that>* WHO WAS YOUR BEST FRIEND *</that>
