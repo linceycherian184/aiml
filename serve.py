@@ -49,9 +49,11 @@ class S(BaseHTTPRequestHandler):
                 self.respond_to(msg)
             else:
                 self.send_response(404)
+                self.end_headers()
         except:
             print sys.exc_info()
             self.send_response(400)
+            self.end_headers()
 
     #       problem/
     # AIML can use variables to make the conversation
@@ -100,9 +102,14 @@ class S(BaseHTTPRequestHandler):
                 self.send_response(404)
                 self.end_headers()
         else:
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(k.respond(msg))
+            resp = k.respond(msg)
+            if resp:
+                self.send_response(200)
+                self.end_headers()
+                self.wfile.write(resp)
+            else:
+                self.send_response(400)
+                self.end_headers()
 
 
 #       outcome/
