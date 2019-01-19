@@ -84,7 +84,10 @@ class S(BaseHTTPRequestHandler):
             if name:
                 self.send_response(200)
                 self.end_headers()
-                self.wfile.write(k.getPredicate(name))
+                val = k.getPredicate(name)
+                if isinstance(val, unicode):
+                    val = val.encode('utf-8')
+                self.wfile.write(val)
             else:
                 self.send_response(404)
                 self.end_headers()
@@ -106,12 +109,14 @@ class S(BaseHTTPRequestHandler):
                 self.end_headers()
         else:
             resp = k.respond(msg)
+            if isinstance(resp, unicode):
+                resp = resp.encode('utf-8')
             if resp:
                 self.send_response(200)
                 self.end_headers()
                 self.wfile.write(resp)
             else:
-                self.send_response(400)
+                self.send_response(404)
                 self.end_headers()
 
 
